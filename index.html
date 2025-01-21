@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirriam Mambwe Scholarship Foundation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/Logo.jpg" alt="MMSF Logo" class="logo"> <!-- Replace with logo image -->
+        <ul class="nav-links">
+            <li class="active"><a href="#home">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#donation">DONATION</a></li>
+            <li class="ctn"><a href="#contacts">CONTACTS</a></li>
+        </ul>
+        <img src="images/2.jpeg" alt="" class="menu-btn">
+    </nav>
+    <header id="home">
+        <div class="header-content">
+            <p class="motto">IN THEIR HEART A DREAM LIVES, WITH OUR SUPPORT IT COMES ALIVE</p>
+            <a href="" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <!--Services-->
+    <section id="services" class="services">
+        <div class="title">
+            <h1>Services Offered</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/first.jpg" alt="">
+                <h4>Scholarship</h4>
+                <p>Providing financial support to deserving students to help them achieve their educational goals.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="images/second.jpg" alt="">
+                <h4>Health Support</h4>
+                <p>Offering health support services to ensure the well-being of our scholars.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="images/third.jpg" alt="">
+                <h4>Mentorship</h4>
+                <p>Providing guidance and mentorship to help students navigate their academic and career paths.</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h1>About MMSF</h1>
+            <p>The Mirriam Mambwe Scholarship Foundation (MMSF) is dedicated to supporting students in their educational journey by providing scholarships, health support, and mentorship. Our mission is to empower the next generation of leaders through education and holistic support.</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+    <section id="donation" class="donation">
+        <div class="donation-content">
+            <h1>Make a Donation</h1>
+            <p>Your generous donations help us provide scholarships, health support, and mentorship to deserving students. Every contribution makes a difference.</p>
+            <form action="#" method="post">
+                <label for="donor-name">Name:</label>
+                <input type="text" id="donor-name" name="donor-name" required>
+                <label for="donor-email">Email:</label>
+                <input type="email" id="donor-email" name="donor-email" required>
+                <label for="donation-amount">Donation Amount:</label>
+                <input type="number" id="donation-amount" name="donation-amount" required>
+                <button type="submit" class="ctn">Donate</button>
+            </form>
+        </div>
+    </section>
+    <section id="contacts" class="contacts">
+        <div class="contacts-content">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or need further information, please feel free to contact us.</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" class="ctn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bottom-navbar">
+        <div class="bottom-nav-content">
+            <p>Contact us: +123 456 7890 | Email: info@mmsf.org | <a href="https://www.facebook.com/mmsf" target="_blank">Facebook</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+        const bottomNavbar = document.querySelector('.bottom-navbar')
+        let lastScrollTop = 0
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+            if (scrollTop > lastScrollTop) {
+                bottomNavbar.classList.add('hidden')
+            } else {
+                bottomNavbar.classList.remove('hidden')
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+        })
+    </script>
+</body>
+</html>
